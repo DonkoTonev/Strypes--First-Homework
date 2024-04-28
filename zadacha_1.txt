@@ -1,0 +1,30 @@
+# Създаване на празната директория day1 и файловете test1, test2, test3
+mkdir day1
+touch day1/test1
+touch day1/test2
+touch day1/test3
+
+# Поставяне на текстовете в съответните файлове
+echo "Hello Bash" > day1/test1
+date > day1/test2
+basename "$(pwd)" > day1/test3
+
+# Създаване на директория testDir в day1 и копиране на файловете в нея
+mkdir day1/testDir
+cp day1/test1 day1/test2 day1/test3 day1/testDir
+
+# Създаване на вложена директория testNested и копиране на файловете в нея
+mkdir day1/testDir/testNested
+cp day1/test1 day1/test2 day1/testDir/testNested
+
+# Изтриване на файловете test1, test2, test3 от day1
+rm day1/test1 day1/test2 day1/test3
+
+# Копиране на съдържанието на директорията testDir в новата директория testDirCopy
+cp -r day1/testDir day1/testDirCopy
+
+# Изтриване на файла test1 от директорията testDir
+rm day1/testDir/test1
+
+# Изтриване на цялото съдържание на директорията testDirCopy
+rm -r day1/testDirCopy/*
