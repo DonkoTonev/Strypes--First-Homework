@@ -1,0 +1,7 @@
+# Намерете най-голямото число
+max_num=$(cat numbers.txt | sort -n | tail -n 1)
+echo "Най-голямото число: $max_num"
+
+# Намерете най-малкото число
+min_num=$(cat numbers.txt | sort -n | head -n 1)
+echo "Най-малкото число: $min_num"
